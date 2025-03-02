@@ -1,4 +1,4 @@
-const todayDate = document.getElementById("date-today");
+const todayDate = document.getElementById("date");
 const currentDate = new Date();
 todayDate.innerText = currentDate.toDateString();
 

@@ -42,13 +42,13 @@
 </head>
 
 <body id="body" class="poppins mt-5 bg-slate-100">
-    <header class="container mx-auto bg-white p-6 rounded-2xl flex justify-between items-center py-4">
+    <header class="container mx-auto bg-white p-6 rounded-2xl flex justify-between items-center">
         <div class="flex items-center gap-[10px]">
             <img class="hover:cursor-pointer" src="./assets/logo.png" alt="" />
             <h1 class="text-3xl">Dev<span class="font-bold">Board</span></h1>
         </div>
         <div class="flex gap-9 items-center">
-            <div class="flex items-center gap-1.5 bg-[#F4F7FF] rounded-[32px] p-3 text-2xl font-bold">
+            <div class="flex items-center gap-3 bg-[#F4F7FF] rounded-[32px] p-3 text-2xl font-bold">
                 <img src="./assets/checkbox.png" alt="" />
                 <button id="task-complete">
                     23
@@ -61,149 +61,151 @@
     </header>
     <main class="container mx-auto  grid grid-cols-12 gap-4 mt-5">
         <section class="bg-white rounded-2xl col-span-9">
-            <div class="flex gap-5 rounded-2xl p-6 justify-between items-center">
-                <div class="flex items-center rounded-xl bg-slate-100 p-8 gap-5 h-[128px]">
+            <div class="flex rounded-2xl p-4 justify-between items-center">
+                <div class="flex items-center rounded-xl bg-slate-100 px-8 gap-5 h-[128px]">
                     <div>
                         <img src="./assets/checkbox.png" alt="" />
                     </div>
-                    <div class="">
+                    <div class="text-[#00303C]">
                         <h2 class="text-base">Task Assigned</h2>
                         <h1 id="task-assign" class="text-xl font-bold">06</h1>
                     </div>
                 </div>
-                <div class="flex items-center gap-5 custom-gradient p-6 rounded-xl h-[128px]">
-                    <div>
+                <div class="flex items-center gap-5 custom-gradient px-10 rounded-xl h-[128px]">
+                    <div class="border border-dashed text-gray-400">
                         <img src="./assets/board.png" alt="" />
                     </div>
                     <div>
-                        <a href="blog.html" class="text-white cursor-pointer text-2xl font-medium leading-9">
+                        <a href="blog.html" class="text-white cursor-pointer text-2xl">
                             Discover Something <br>
                             New Today!
                         </a>
                     </div>
                 </div>
 
-                <div class="flex items-center h-[128px] rounded-xl p-8 bg-slate-100 gap-4">
-                    <div><img src="./assets/calender.png" alt="" /></div>
-                    <div>
-                        <p id="date-today">
+                <div class="flex items-center h-[128px] rounded-xl px-4 bg-slate-100 gap-4">
+                    <div  class=" p-3 rounded-[50%] bg-[#FFFFFF]" >
+                        <img src="./assets/calender.png" alt="" />
+                    </div>
+                    <div class="text-[#00303C] text-lg font-medium">
+                        <p id="date">
                             wed, <br> <span class="font-bold">Jul 28 2025 </span>
                         </p>
                     </div>
                 </div>
             </div>
             <!-- cards  -->
-            <div class="mt-5 px-6 grid gap-6 grid-cols-3">
+            <div class="px-6 grid grid-cols-3 gap-4">
                 <!-- card 1 -->
-                <div class="bg-slate-100  p-5 rounded-2xl">
+                <div class="bg-slate-100 p-6 rounded-2xl">
                     <h3 class="bg-white p-3 w-fit text-[#00303C] rounded-lg">
                         ShopEase
                     </h3>
-                    <h1 class="text-2xl card-title font-semibold">Fix Mobile Button Issue</h1>
+                    <h1 class="text-xl text-[#00303C] card-title my-2 font-semibold">Fix Mobile Button Issue</h1>
                     <p class="p-4 bg-white opacity-50 truncate rounded-lg">
                         Check for debris, restart device, update software, adjust settings, or replace button if damaged.
                     </p>
                     <div class="flex mt-5 items-center justify-between">
-                        <div>
-                            <p class="text-[#00303C] text-sm">Deadline</p>
-                            <h3 class="text-sm"">23 march 2025</h6>
+                        <div class="text-[#00303C] text-sm">
+                            <p>Deadline</p>
+                            <h3 class="font-semibold">23 march 2025</h6>
                         </div>
-                        <button id="complete-btn" class="btn-primary">
+                        <button class="btn-primary">
                             Complete
                         </button>
                     </div>
                 </div>
                 <!-- card 2 -->
-                <div class="bg-slate-100 p-5 pr-3 rounded-2xl">
+                <div class="bg-slate-100 p-6 rounded-2xl">
                     <h3 class="bg-white p-3 w-fit text-[#00303C] rounded-lg">
                         CloudSync
                     </h3>
-                    <h1 class="text-2xl card-title font-medium my-4">Add Dark Mode</h1>
+                    <h1 class="text-xl text-[#00303C] card-title font-semibold my-2">Add Dark Mode</h1>
                     <p class="p-4 bg-white opacity-50 truncate rounded-lg">
                         Clean button, restart, update software, enable dark mode, or visit a technician for repair...
                     </p>
                     <div class="flex mt-5 items-center justify-between">
-                        <div>
-                            <p class="text-[#00303C] text-sm">Deadline</p>
-                            <h3 class="text-sm">13 april 2025</h3>
+                        <div class="text-[#00303C] text-sm">
+                            <p>Deadline</p>
+                            <h3 class="font-semibold">13 april 2025</h3>
                         </div>
-                        <button id="complete-btn" class="btn-primary h-fit ">
+                        <button class="btn-primary">
                             Complete
                         </button>
                     </div>
                 </div>
                 <!-- card 3 -->
-                <div class="bg-slate-100 p-5 rounded-2xl">
+                <div class="bg-slate-100 p-6 rounded-2xl">
                     <h3 class="bg-white p-3 w-fit text-[#00303C] rounded-lg">
                         SwiftPay
                     </h3>
-                    <h1 class="text-[24px] card-title font-medium my-4">Optimize Home page</h1>
+                    <h1 class="text-xl text-[#00303C] card-title font-semibold my-2">Optimize Home page</h1>
                     <p class="p-4 bg-white truncate opacity-50 rounded-lg">
                         Optimize homepage by improving load speed, simplifying design....
                     </p>
                     <div class="flex mt-5 items-center justify-between">
-                        <div>
-                            <p class="text-[#00303C] text-sm">Deadline</p>
-                            <h3 class="text-sm">08 may 2025</h3>
+                        <div class="text-[#00303C] text-sm">
+                            <p>Deadline</p>
+                            <h3 class="font-semibold">08 may 2025</h3>
                         </div>
-                        <button class="btn-primary h-fit ">
+                        <button class="btn-primary">
                             Complete
                         </button>
                     </div>
                 </div>
                 <!-- card 4 -->
-                <div class="bg-slate-100 p-5 pr-3 rounded-2xl">
+                <div class="bg-slate-100 p-6 rounded-2xl">
                     <h3 class="bg-white p-3 w-fit text-[#00303C] rounded-lg">
                         Meta
                     </h3>
-                    <h1 class="text-2xl card-title font-medium my-4">Add new emoji 🤲</h1>
+                    <h1 class="text-xl text-[#00303C] card-title font-semibold my-2">Add new emoji 🤲</h1>
                     <p class="p-4 bg-white truncate opacity-50 rounded-lg">
                         this emojis express your feelings in the awesome ways.......
                     </p>
                     <div class="flex mt-5 items-center justify-between">
-                        <div>
-                            <p class="text-[#00303C] text-sm">Deadline</p>
-                            <h3 class="text-sm">12 Sep 2025</h6>
+                        <div class="text-[#00303C] text-sm">
+                            <p>Deadline</p>
+                            <h3 class="font-semibold">12 Sep 2025</h6>
                         </div>
-                        <button class="btn-primary h-fit ">
+                        <button class="btn-primary">
                             Complete
                         </button>
                     </div>
                 </div>
                 <!-- card 5 -->
-                <div class="bg-slate-100 p-5 pr-3 rounded-2xl">
+                <div class="bg-slate-100 p-6 rounded-2xl">
                     <h3 class="bg-white p-3 w-fit text-[#00303C] rounded-lg">
                         Google LLC
                     </h3>
-                    <h1 class="text-[24px] card-title font-medium my-4">Integrate OpenAI API</h1>
+                    <h1 class="text-xl text-[#00303C] card-title font-semibold my-2">Integrate OpenAI API</h1>
                     <p class="p-4 bg-white truncate opacity-50 rounded-lg">
                         Integrate OpenAI API by signing up, API keys, and coding....
                     </p>
                     <div class="flex mt-5 items-center justify-between">
-                        <div>
-                            <p class="text-[#00303C] text-sm">Deadline</p>
-                            <h3 class="text-sm">09 August 2025</h3>
+                        <div class="text-[#00303C] text-sm">
+                            <p>Deadline</p>
+                            <h3 class="font-semibold">09 August 2025</h3>
                         </div>
-                        <button class="btn-primary h-fit ">
+                        <button class="btn-primary">
                             Complete
                         </button>
                     </div>
                 </div>
                 <!-- card 6 -->
-                <div class="bg-slate-100 p-5 pr-3 rounded-2xl">
+                <div class="bg-slate-100 p-6 rounded-2xl">
                     <h3 class="bg-white p-3 w-fit text-[#00303C] rounded-lg ">
-                        Glassdoar
+                        Glasswork
                     </h3>
-                    <h1 class="text-[24px] card-title font-me my-4">Improve Job searching</h1>
+                    <h1 class="text-xl text-[#00303C] card-title font-semibold my-2">Improve Job searching</h1>
                     <p class="p-4 bg-white truncate opacity-50 rounded-lg">
                         Improve it by optimizing your resume, networking on LinkedIn.
                     </p>
                     <div class="flex mt-5 items-center justify-between">
-                        <div>
-                            <p class="text-[#00303C] text-sm">Deadline</p>
-                            <h3 class="text-sm">23 march 2025</h3>
+                        <div class="text-[#00303C] text-sm">
+                            <p>Deadline</p>
+                            <h3 class="font-semibold">23 march 2025</h3>
                         </div>
-                        <button class="btn-primary h-fit ">
+                        <button class="btn-primary">
                             Complete
                         </button>
                     </div>
@@ -211,10 +213,10 @@
             </div>
         </section>
         <!-- activity log start  -->
-        <section class="bg-white rounded-2xl col-span-3">
+        <section class="bg-white text-[#00303C] rounded-2xl col-span-3">
             <div class="flex justify-center gap-4 mt-4 items-center">
                 <img src="./assets/activity.png" alt="" />
-                <h1>Activity Log</h1>
+                <h1 class="text-xl font-medium">Activity Log</h1>
             </div>
             <div class="flex justify-center">
                 <button id="clear-btn" class="active-btn mt-5">Clear History</button>
