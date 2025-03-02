@@ -16,7 +16,7 @@ for (let i = 0; i < buttons.length; i++) {
     } else {
       alert("Board Updated Successfully!");
       if (parseInt(taskAssigned.innerText) <= 1) {
-        alert("Congrats!! you have successfully completed the current task");
+        alert("Congratulation..!! You have successfully completed All tasks");
       }
       taskAssigned.innerText = parseInt(taskAssigned.innerText) - 1;
       taskComplete.innerText = parseInt(taskComplete.innerText) + 1;
