@@ -2,41 +2,229 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dev board</title>
-    <!-- font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev Board</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
-<style>
-    .poppins{
-        font-family: "Poppins", sans-serif;
-    }
-</style>
+        rel="stylesheet" />
 
-<body class="poppins bg-slate-200 pt-5 min-h-[100vh]">
-    <header class="container mx-auto flex justify-between items-center bg-[#FFFFFF] border-none rounded-2xl p-6">
-        <div class="flex items-center gap-3">
-            <img src="assets/logo.png" alt="">
-            <h1 class="text-[#00303C] text-4xl">Dev <span class=" font-bold">Board</span></h1>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        h2 {
+            font-size: 16px;
+        }
+
+        .custom-gradient {
+            background: linear-gradient(130.7deg,
+                    rgb(55, 82, 253) 0.419%,
+                    rgb(108, 127, 250) 52.66%,
+                    rgb(155, 168, 248) 99.733%);
+        }
+
+        .poppins{
+            font-family: "Poppins", sans-serif;
+        }
+
+        .btn-primary,
+        .active-btn {
+            padding: 10px;
+            background-color: #3752fd;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body id="body" class="poppins mt-5 bg-slate-100">
+    <header class="container mx-auto bg-white p-6 rounded-2xl flex justify-between items-center py-4">
+        <div class="flex items-center gap-[10px]">
+            <img class="hover:cursor-pointer" src="./assets/logo.png" alt="" />
+            <h1 class="text-3xl">Dev<span class="font-bold">Board</span></h1>
         </div>
-        <div class="flex items-center gap-8">
-            <div class="flex items-center gap-3 border-none rounded-4xl bg-[#F4F7FF] p-2">
-                <img src="assets/checkbox.png" alt="">
-                <h1 class="font-bold text-3xl">24</h1>
+        <div class="flex gap-9 items-center">
+            <div class="flex items-center gap-1.5 bg-[#F4F7FF] rounded-[32px] p-3 text-2xl font-bold">
+                <img src="./assets/checkbox.png" alt="" />
+                <button id="task-complete">
+                    23
+                </button>
             </div>
-            <button>
-                <img src="assets/theme-btn.png" alt="">
+            <button id="theme-btn" class="bg-gray-100 cursor-pointer rounded-full p-2">
+                <img src="./assets/theme-btn.png" alt="" />
             </button>
         </div>
     </header>
+    <main class="container mx-auto  grid grid-cols-12 gap-4 mt-5">
+        <section class="bg-white rounded-2xl col-span-9">
+            <div class="flex gap-5 rounded-2xl p-6 justify-between items-center">
+                <div class="flex items-center rounded-xl bg-slate-100 p-8 gap-5 h-[128px]">
+                    <div>
+                        <img src="./assets/checkbox.png" alt="" />
+                    </div>
+                    <div class="">
+                        <h2 class="text-base">Task Assigned</h2>
+                        <h1 id="task-assign" class="text-xl font-bold">06</h1>
+                    </div>
+                </div>
+                <div class="flex items-center gap-5 custom-gradient p-6 rounded-xl h-[128px]">
+                    <div>
+                        <img src="./assets/board.png" alt="" />
+                    </div>
+                    <div>
+                        <a href="blog.html" class="text-white cursor-pointer text-2xl font-medium leading-9">
+                            Discover Something <br>
+                            New Today!
+                        </a>
+                    </div>
+                </div>
 
+                <div class="flex items-center h-[128px] rounded-xl p-8 bg-slate-100 gap-4">
+                    <div><img src="./assets/calender.png" alt="" /></div>
+                    <div>
+                        <p id="date-today">
+                            wed, <br> <span class="font-bold">Jul 28 2025 </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- cards  -->
+            <div class="mt-5 px-6 grid gap-6 grid-cols-3">
+                <!-- card 1 -->
+                <div class="bg-slate-100  p-5 rounded-2xl">
+                    <h3 class="bg-white p-3 w-fit text-[#00303C] rounded-lg">
+                        ShopEase
+                    </h3>
+                    <h1 class="text-2xl card-title font-semibold">Fix Mobile Button Issue</h1>
+                    <p class="p-4 bg-white opacity-50 truncate rounded-lg">
+                        Check for debris, restart device, update software, adjust settings, or replace button if damaged.
+                    </p>
+                    <div class="flex mt-5 items-center justify-between">
+                        <div>
+                            <p class="text-[#00303C] text-sm">Deadline</p>
+                            <h3 class="text-sm"">23 march 2025</h6>
+                        </div>
+                        <button id="complete-btn" class="btn-primary">
+                            Complete
+                        </button>
+                    </div>
+                </div>
+                <!-- card 2 -->
+                <div class="bg-slate-100 p-5 pr-3 rounded-2xl">
+                    <h3 class="bg-white p-3 w-fit text-[#00303C] rounded-lg">
+                        CloudSync
+                    </h3>
+                    <h1 class="text-2xl card-title font-medium my-4">Add Dark Mode</h1>
+                    <p class="p-4 bg-white opacity-50 truncate rounded-lg">
+                        Clean button, restart, update software, enable dark mode, or visit a technician for repair...
+                    </p>
+                    <div class="flex mt-5 items-center justify-between">
+                        <div>
+                            <p class="text-[#00303C] text-sm">Deadline</p>
+                            <h3 class="text-sm">13 april 2025</h3>
+                        </div>
+                        <button id="complete-btn" class="btn-primary h-fit ">
+                            Complete
+                        </button>
+                    </div>
+                </div>
+                <!-- card 3 -->
+                <div class="bg-slate-100 p-5 rounded-2xl">
+                    <h3 class="bg-white p-3 w-fit text-[#00303C] rounded-lg">
+                        SwiftPay
+                    </h3>
+                    <h1 class="text-[24px] card-title font-medium my-4">Optimize Home page</h1>
+                    <p class="p-4 bg-white truncate opacity-50 rounded-lg">
+                        Optimize homepage by improving load speed, simplifying design....
+                    </p>
+                    <div class="flex mt-5 items-center justify-between">
+                        <div>
+                            <p class="text-[#00303C] text-sm">Deadline</p>
+                            <h3 class="text-sm">08 may 2025</h3>
+                        </div>
+                        <button class="btn-primary h-fit ">
+                            Complete
+                        </button>
+                    </div>
+                </div>
+                <!-- card 4 -->
+                <div class="bg-slate-100 p-5 pr-3 rounded-2xl">
+                    <h3 class="bg-white p-3 w-fit text-[#00303C] rounded-lg">
+                        Meta
+                    </h3>
+                    <h1 class="text-2xl card-title font-medium my-4">Add new emoji 🤲</h1>
+                    <p class="p-4 bg-white truncate opacity-50 rounded-lg">
+                        this emojis express your feelings in the awesome ways.......
+                    </p>
+                    <div class="flex mt-5 items-center justify-between">
+                        <div>
+                            <p class="text-[#00303C] text-sm">Deadline</p>
+                            <h3 class="text-sm">12 Sep 2025</h6>
+                        </div>
+                        <button class="btn-primary h-fit ">
+                            Complete
+                        </button>
+                    </div>
+                </div>
+                <!-- card 5 -->
+                <div class="bg-slate-100 p-5 pr-3 rounded-2xl">
+                    <h3 class="bg-white p-3 w-fit text-[#00303C] rounded-lg">
+                        Google LLC
+                    </h3>
+                    <h1 class="text-[24px] card-title font-medium my-4">Integrate OpenAI API</h1>
+                    <p class="p-4 bg-white truncate opacity-50 rounded-lg">
+                        Integrate OpenAI API by signing up, API keys, and coding....
+                    </p>
+                    <div class="flex mt-5 items-center justify-between">
+                        <div>
+                            <p class="text-[#00303C] text-sm">Deadline</p>
+                            <h3 class="text-sm">09 August 2025</h3>
+                        </div>
+                        <button class="btn-primary h-fit ">
+                            Complete
+                        </button>
+                    </div>
+                </div>
+                <!-- card 6 -->
+                <div class="bg-slate-100 p-5 pr-3 rounded-2xl">
+                    <h3 class="bg-white p-3 w-fit text-[#00303C] rounded-lg ">
+                        Glassdoar
+                    </h3>
+                    <h1 class="text-[24px] card-title font-me my-4">Improve Job searching</h1>
+                    <p class="p-4 bg-white truncate opacity-50 rounded-lg">
+                        Improve it by optimizing your resume, networking on LinkedIn.
+                    </p>
+                    <div class="flex mt-5 items-center justify-between">
+                        <div>
+                            <p class="text-[#00303C] text-sm">Deadline</p>
+                            <h3 class="text-sm">23 march 2025</h3>
+                        </div>
+                        <button class="btn-primary h-fit ">
+                            Complete
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- activity log start  -->
+        <section class="bg-white rounded-2xl col-span-3">
+            <div class="flex justify-center gap-4 mt-4 items-center">
+                <img src="./assets/activity.png" alt="" />
+                <h1>Activity Log</h1>
+            </div>
+            <div class="flex justify-center">
+                <button id="clear-btn" class="active-btn mt-5">Clear History</button>
+            </div>
+            <div id="history-btn">
+
+            </div>
+        </section>
+    </main>
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>
