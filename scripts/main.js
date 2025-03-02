@@ -72,10 +72,10 @@ const bodyId = document.getElementById("body");
 
 const colors = [
   "bg-slate-100",
-  "bg-purple-300",
-  "bg-red-300",
   "bg-blue-300",
-  "bg-yellow-300",
+  "bg-purple-300",
+  "bg-green-300",
+  "bg-red-300"
 ];
 let currentIndex = 0;
 document.getElementById("theme-btn").addEventListener("click", function () {
